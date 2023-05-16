@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>논제 제시와 답변의 밤</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>논제 제시와 답변의 밤</h1>
+  <p>글쓴이: [책 글쓴이 이름]</p>
+  <p>년도: [책 출판 년도]</p>
+  <img src="book-cover.jpg" alt="책 표지 이미지">
+  <h2>[논제]</h2> 
+  <ul>
+    <li>타입스크립트 만만세</li>
+    <li>아 루아로 웹페이지 만들고 싶다</li>
+  </ul>
+  <form action="{{ url_for('posts') }}" method="post">
+    <label for="num">학번</label>
+    <input type="text" name="num" id="num" required>
+
+    <label for="content">내용</label>
+    <textarea name="content" id="content" rows="10" required></textarea>
+
+    <input type="submit" value="제출하다">
+  </form>
+  	<hr>
+	<h2>답변 확인의 밤:</h2>
+	<ul id="replies">
+	</ul>
+  <script>
+    // Add event listener to the form to handle form submissions
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        const numInput = document.querySelector('#num');
+        const num = numInput.value;
+        numInput.value = ''; // Clear the input fields
+        const replyInput = document.querySelector('#content');
+        const reply = replyInput.value;
+        replyInput.value = ''; // Clear the input fields
+    
+        // Create a new list item to display the reply
+        const li = document.createElement('li');
+        li.textContent = num + ': ' + reply;
+    
+        // Add the new list item to the list of replies
+        document.querySelector('#replies').appendChild(li);
+    });
+    </script>
+  <form action="/submit_review" method="get">
+    <button type="submit">독서 소감문 제출의 밤</button>
+  </form>
+</body>
+</html>
