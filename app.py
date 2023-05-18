@@ -29,6 +29,10 @@ with app.app_context():
 
 reviews = []
 
+@app.route('/generic')
+def generic():
+    return render_template('generic.html')
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':

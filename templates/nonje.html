@@ -29,21 +29,18 @@
 	<ul id="replies">
 	</ul>
   <script>
-    // Add event listener to the form to handle form submissions
     document.querySelector('form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); 
         const numInput = document.querySelector('#num');
         const num = numInput.value;
-        numInput.value = ''; // Clear the input fields
+        numInput.value = '';
         const replyInput = document.querySelector('#content');
         const reply = replyInput.value;
-        replyInput.value = ''; // Clear the input fields
+        replyInput.value = ''; 
     
-        // Create a new list item to display the reply
         const li = document.createElement('li');
         li.textContent = num + ': ' + reply;
     
-        // Add the new list item to the list of replies
         document.querySelector('#replies').appendChild(li);
     });
     </script>

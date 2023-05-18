@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sign Up</title>
+    <title>회원가입의 밤</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Sign Up</h1>
+    <h1>회원가입의 밤</h1>
     <form method="POST" action="/signup">
-        <label for="username">Username:</label>
+        <label for="username">아이디 입력의 밤:</label>
         <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
+        <label for="password">비밀번호 입력의 밤:</label>
         <input type="password" id="password" name="password" required><br><br>
         <input type="submit" value="Submit">
     </form>
-    <a href="/">Already have an account? Log in.</a>
+    <a href="/">이미 계정이 있으신가요? 로그인의 밤으로 이동하기.</a>
 </body>
 </html>
