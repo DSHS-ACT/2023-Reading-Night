@@ -2,18 +2,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import Flask
 import os
 
-app = Flask(__name__)
 db = SQLAlchemy()
-
-    
-basdir = os.path.abspath(os.path.dirname(__file__))
-dbfile = os.path.join(basdir, "bookdata.db")
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bookdata.db'
-app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'jqiowejrojzxcovnklqnweiorjqwoijroi'
-
 
 class bookreview(db.Model):
     __tablename__ = "bookreview"  
@@ -53,9 +42,3 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
-    
-
-@app.before_first_request
-def create_database():
-     db.create_all(app=app)
-     db.session.commit()
