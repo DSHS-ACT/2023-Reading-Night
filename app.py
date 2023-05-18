@@ -19,7 +19,7 @@ app.config['SECRET_KEY'] = 'jqiowejrojzxcovnklqnweiorjqwoijroi'
 app.config['JSON_AS_ASCII'] = False
 engine = create_engine('sqlite:///bookdata.db')
 Session = sessionmaker(bind=engine)
-session = Session()
+sql_session = Session()
 
 db.init_app(app)
 db.app = app
