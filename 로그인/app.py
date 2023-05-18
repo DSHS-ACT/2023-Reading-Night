@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder='C:/Users/82107/Desktop/templates')
 app.secret_key = 'some secret key'
 
 # DB 설정
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///C:/Users/82107/Desktop/templates/users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 with app.app_context():

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Topic</title>
+  </head>
+  <body>
+    <h1>Book Topic</h1>
+    <form action="{{ url_for('post') }}" method="post">
+      <label for="topic">Topic:</label><br>
+      <input type="text" id="topic" name="topic"><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
