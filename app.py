@@ -154,7 +154,7 @@ def nonje():
 @app.route('/posts', methods=['GET', 'POST'])
 def posts():
     # 데이터베이스에서 모든 리뷰 검색
-    nposts = booknonje.query.all()
+    nposts = bookreview.query.all()
     # 리뷰 데이터로 리뷰 목록 템플릿 렌더링
     return render_template('nonje.html', nposts=nposts)
 
@@ -164,6 +164,8 @@ def posts():
 @app.before_first_request
 def create_database():
     db.create_all()
+    #for data in bookreview.query.all():
+         #db.session.delete(data)
     db.session.commit()
 
 if __name__ == '__main__':

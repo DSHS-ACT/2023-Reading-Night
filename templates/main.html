@@ -12,8 +12,8 @@
 		<title>독 밤</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
-		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='noscript.css') }}" /></noscript>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename='css/noscript.css') }}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -39,7 +39,7 @@
 							<h1>독서의 밤</h1>
 							<p>제공 <a href="https://www.dshs.kr/">대전 대신고</a></p>
               <ul class="actions">
-                <li><a href="nonje" class="button">논제 제시와 답변의 밤으로 이동</a></li>
+                <li><a href="submit_review" class="button">보고서 작성의 밤으로 이동</a></li>
 				<li><a href="https://dshs-act.github.io/2023-Reading-Night-Discuss/" class="button">온라인 토론의 밤으로 이동</a></li>
 			  </ul>
 						</div>
@@ -69,7 +69,7 @@
 									<h2>갖춰야 하는 마음가짐</h2>
 									<ol>
 										<li>읽지 않으면 읽을 수 없다.</li>
-										<li>읽지 않으면 못 읽는다.</l1>
+										<li>읽지 않으면 못 읽는다.</li>
 										<li>빨리 읽는건 남는 게 없다.</li>
 										<li>고전을 읽다가 고전을 면치 못한다.</li>
 										<li>책을 읽는 척해도 아무도 알아봐 주지 않는다.</li>
@@ -146,9 +146,9 @@
 								
 							  </style>
 							  <body>
-								<p style="font-size : 35px; color:#FFFFFF; font-weight : bold;" align = center>일정표</p>
+								<p style="font-size : 35px; color:#FFFFFF; font-weight : bold; text-align : center;">일정표</p>
 								<table width = "750" height = "450">
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<th>시간</th>
 									<th>월요일</th>
 									<th>화요일</th>
@@ -158,7 +158,7 @@
 									<th>토요일</th>
 									<th>일요일</th>
 								  </tr>
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<td>8:00-9:00</td>
 									<td></td>
 									<td></td>
@@ -168,7 +168,7 @@
 									<td></td>
 									<td></td>
 								  </tr>
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<td>9:00-10:00</td>
 									<td></td>
 									<td></td>
@@ -178,7 +178,7 @@
 									<td></td>
 									<td></td>
 								  </tr>
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<td>10:00-11:00</td>
 									<td></td>
 									<td></td>
@@ -188,7 +188,7 @@
 									<td></td>
 									<td></td>
 								  </tr>
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<td>11:00-12:00</td>
 									<td></td>
 									<td></td>
@@ -198,7 +198,7 @@
 									<td></td>
 									<td></td>
 								  </tr>
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<td>12:00-13:00</td>
 									<td></td>
 									<td></td>
@@ -208,7 +208,7 @@
 									<td></td>
 									<td></td>
 								  </tr>
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<td>13:00-14:00</td>
 									<td></td>
 									<td></td>
@@ -218,7 +218,7 @@
 									<td></td>
 									<td></td>
 								  </tr>
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<td>14:00-15:00</td>
 									<td></td>
 									<td></td>
@@ -228,7 +228,7 @@
 									<td></td>
 									<td></td>
 								  </tr>
-								  <tr bgcolor = #FFFFFF>
+								  <tr bgcolor = "#FFFFFF">
 									<td>15:00-16:00</td>
 									<td></td>
 									<td></td>
@@ -249,13 +249,13 @@
 					</section>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 	</body>
 </html>

@@ -2,15 +2,15 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>논제 제시와 답변 리스트의 밤</title>
+  <title>보고서 작성 리스트의 밤</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-  <h1>논제 제시와 답변 리스트의 밤</h1>
+  <h1>보고서 작성 리스트의 밤</h1>
   <ul>
     {% for booknonje in nposts %}
     <li>
-      <h2>학번: {{ booknonje.num }}</h2>
-      <p>답변: {{ booknonje.content }}</p>
+      <h2>학번 이름: {{ booknonje.num }}</h2>
+      <p>보고서 내용: {{ booknonje.content }}</p>
     </li>
     {% endfor %}

@@ -2,21 +2,21 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>논제 제시와 답변 리스트의 밤</title>
+  <title>보고서 리스트의 밤</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-  <h1>논제 제시와 답변 리스트의 밤</h1>
-  <h2>[논제]</h2> 
+  <h1>보고서 리스트의 밤</h1>
+  <h3>이 곳에 당신의 보고서가 기록됩니다.</h3> 
   <form action="/next_page" method="get">
-    <button type="submit">논제 제시와 답변의 밤으로 이동하기</button>
+    <button type="submit">보고서 작성의 밤으로 이동하기</button>
   </form>
   <ul>
     {% for bookreview in reviews %}
     <li>
       <h2>이름: {{ bookreview.title }}</h2>
       <p>학번 {{ bookreview.author }}</p>
-      <p>답변: {{ bookreview.review }}</p>
+      <p>보고서 내용: {{ bookreview.review }}</p>
     </li>
     {% endfor %}
     
