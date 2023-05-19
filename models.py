@@ -10,7 +10,8 @@ class bookreview(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     author = db.Column(db.String(100), nullable=False)
-    review = db.Column(db.String(5000), nullable=False)
+    jemok = db.Column(db.String(20), nullable=False)
+    review = db.Column(db.String(30000), nullable=False)
     
 class booknonje(db.Model):
     __tablename__ = "booknonje"  

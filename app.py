@@ -91,12 +91,13 @@ def submit_review():
         # 양식 데이터 가져오기
         title = request.form['title']
         author = request.form['author']
+        jemok = request.form['jemok']
         review = request.form['review']
-        book = bookreview(title=title, author=author, review=review)
+        book = bookreview(title=title, author=author, review=review, jemok=jemok)
         db.session.add(book)
         db.session.commit()
         # 리뷰를 목록에 추가
-        reviews.append({'title': title, 'author': author, 'review': review})
+        reviews.append({'title': title, 'author': author, 'jemok': jemok, 'review': review})
         # 리뷰 목록 페이지로 리디렉션
         return redirect(url_for('review_list'))
 

@@ -15,7 +15,8 @@
     {% for bookreview in reviews %}
     <li>
       <h2>이름: {{ bookreview.title }}</h2>
-      <p>학번 {{ bookreview.author }}</p>
+      <p>학번: {{ bookreview.author }}</p>
+      <p>책 제목 {{ bookreview.jemok }}</p>
       <p>보고서 내용: {{ bookreview.review }}</p>
     </li>
     {% endfor %}

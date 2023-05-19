@@ -2,18 +2,26 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>보고서 작성의 밤</title>
+  <title style="font-size: 10px">보고서 작성의 밤</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
   <h1>보고서 작성의 밤</h1>
-  <h2>이번 독서의 밤 활동을 하며, 어떠한 활동을 했는지 작성해 주세요.</h2> 
+  <h2>이번 독서의 밤 활동을 하며, 어떠한 활동을 했는지 일목요연하게 작성해 주세요.</h2> 
+  <h2>↓↓ Keywords ↓↓</h2>
+  <p>- 느낀 점</p>
+  <p>- 책과의 연계성</p>
+  <p>- 추후 탐구 활동 및 계획</p>
   <form action="{{ url_for('submit_review') }}" method="post">
     <label for="title">이름 작성의 밤:</label>
     <input type="text" name="title" id="title" required>
 
     <label for="author">학번 작성의 밤:</label>
     <input type="text" name="author" id="author" required>
+
+    <label for="jemok">책 제목 작성의 밤:</label>
+    <input type="text" name="jemok" id="jemok" required>
+
 
     <label for="review">보고서 작성의 밤:</label>
     <textarea name="review" id="review" rows="10" required></textarea>
