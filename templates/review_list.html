@@ -4,6 +4,35 @@
   <meta charset="UTF-8">
   <title>보고서 리스트의 밤</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<style>
+  li {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 70%;
+    margin: 0 auto;
+  }
+  h2 {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 5px;
+    padding: 0px 5px;
+    text-align: left;
+  }
+  p.jemok {
+    margin-bottom: 20px;
+    padding: 0px 5px;
+    text-align: left;
+  }
+</style>
+
+
+
 </head>
 <body>
   <h1>보고서 리스트의 밤</h1>
@@ -16,7 +45,7 @@
     <li>
       <h2>이름: {{ bookreview.title }}</h2>
       <p>학번: {{ bookreview.author }}</p>
-      <p>책 제목 {{ bookreview.jemok }}</p>
+      <p>책 제목: {{ bookreview.jemok }}</p>
       <p>보고서 내용: {{ bookreview.review }}</p>
     </li>
     {% endfor %}
